@@ -1,6 +1,10 @@
 body {
   height: 100%;
-  background-image: url('./background.jpg');
+  background-image: url('./assets/background.jpg');
+}
+
+::placeholder {
+  font-size: 24px;
 }
 
 #root, .app-content {
@@ -14,7 +18,7 @@ body {
   opacity: 0.4;
   margin: 0;
   margin-bottom: 100px;
-  padding: 0 10px;
+  padding: 5px 15px;
   user-select: none;
 }
 
@@ -26,11 +30,12 @@ body {
   color: #fff;
   background-color: #000;
   padding: 15px 30px;
-  font-size: 32px;
+  font-size: 24px;
   border-radius: 50px;
   letter-spacing: 1px;
   opacity: 0.7;
-  margin-right: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .search-field, .search-field:focus, .search-field:focus-visible .search-field:active {
@@ -46,19 +51,44 @@ body {
 }
 
 .search-button {
-  padding: 25px 15px;
-  background-color: #00c3ff;
+  padding: 25px 20px;
+  background-color: #6d7171;
   border: none;
   border-radius: 50px;
   opacity: 0.7;
   color: #fff;
   font-weight: bold;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.search-button:hover {
+  background-color: #c7cccc;
+}
+
+.search-button::before {
+  content: '';
+  background: url(./assets/active-search.svg);
+  width: 32px;
+  height: 32px;
+  display: block;
+  background-size: 100%;
+  position: relative;
+  right: 3px;
 }
 
 .search-container {
+  width: 80%;
+  margin: auto;
   margin-bottom: 60px;
 }
 
 .search-form {
   display: flex;
+}
+
+.city-field {
+  width: 100%;
 }
