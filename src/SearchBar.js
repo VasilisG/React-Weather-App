@@ -3,7 +3,7 @@ import React from 'react'
 class SearchBar extends React.Component {
 
     // https://www.weatherbit.io/pricing
-    META_WEATHER_URL = "https://www.metaweather.com/api/location/search/?query=";
+    META_WEATHER_URL = "https://meta-weather.now.sh/api/location/search/?query=";
 
     constructor(props){
         super(props);
@@ -22,22 +22,11 @@ class SearchBar extends React.Component {
 
     handleClick(event){
         if(this.state.city.length >= 3){
-            try {
-                fetch(this.META_WEATHER_URL + this.state.city)
-                .then(response => {
-                    if(response.length !== 0){
-                        response = response.json();
-                        console.log(response);
-                    }
-                    
-                })
-                .then(data => {
-                    console.log(data);
-                });
-            }
-            catch(err){
-                console.log(err);
-            }
+            fetch(this.META_WEATHER_URL + this.state.city)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            });
         }
         event.preventDefault();
     }
