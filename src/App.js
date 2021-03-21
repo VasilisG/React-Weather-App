@@ -8,16 +8,19 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      'forecasts' : []
+      'forecasts' : [],
+      'country' : '',
+      'city' : ''
     };
     this.getForecasts = this.getForecasts.bind(this);
   }
 
-  getForecasts(forecasts){
+  getForecasts(forecasts, country, city){
     this.setState({
-      'forecasts' : forecasts
+      'forecasts' : forecasts,
+      'country' : country,
+      'city' : city
     });
-    console.log(this.state.forecasts);
   }
 
   render(){
@@ -26,7 +29,7 @@ class App extends React.Component {
         <p className="app-title">React Weather</p>
         <div className="app-content">
           <SearchBar callBack={this.getForecasts}/>
-          <Results forecasts={this.state.forecasts}/>
+          <Results forecasts={this.state.forecasts} country={this.state.country}/>
         </div>
       </>
     );

@@ -26,11 +26,11 @@ class SearchBar extends React.Component {
             fetch(this.META_WEATHER_ENDPOINT + this.state.city)
             .then(response => response.json())
             .then(data => {
-                if(data.length > 0){
+                if(data.length){
                     fetch(this.META_WEATHER_LOCATION_ENDPOINT + data[0]['woeid'] + '/')
                     .then(newResponse => newResponse.json())
                     .then(newData => {
-                        this.props.callBack(newData['consolidated_weather']);
+                        this.props.callBack(newData['consolidated_weather'], newData['parent']['title'], newData['title']);
                     });
                 }
             });

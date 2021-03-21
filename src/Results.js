@@ -1,4 +1,5 @@
 import React from 'react';
+import MainWeatherItem from './MainWeatherItem';
 
 class Results extends React.Component {
 
@@ -6,8 +7,8 @@ class Results extends React.Component {
         return (
             <div>
                 {this.props.forecasts.length ? (
-                    <div>
-                        <p>Elements exist.</p>
+                    <div className="forecasts-container">
+                        <MainWeatherItem  data={this.props.forecasts[0]}/>
                     </div>
                 ) : (
                     <div className="results-container no-data">
