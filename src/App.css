@@ -92,3 +92,22 @@ body {
 .city-field {
   width: 100%;
 }
+
+.results-container {
+  width: 80%;
+  margin: auto;
+}
+
+.results-container.no-data {
+  height: 200px;
+  text-align: center;
+  display: table;
+}
+
+.no-data-info {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 32px;
+  opacity: 0.7;
+}
