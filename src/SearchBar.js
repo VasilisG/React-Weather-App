@@ -2,7 +2,6 @@ import React from 'react'
 
 class SearchBar extends React.Component {
 
-    // https://www.weatherbit.io/pricing
     META_WEATHER_URL = "https://meta-weather.now.sh/api/location/search/?query=";
 
     constructor(props){
