@@ -21,7 +21,7 @@ p {
   font-weight: lighter;
   opacity: 0.4;
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding: 5px 15px;
   user-select: none;
 }
@@ -119,6 +119,11 @@ p {
   width: 180px;
 }
 
+.additional-weather-icon {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
 .main-item-container {
   display: flex;
 }
@@ -131,11 +136,11 @@ p {
   text-align: center;
 }
 
-.info-container {
+.info-container, .additional-container {
   color: #fff;
 }
 
-.today {
+.today, .temperature {
   font-size: 32px;
 }
 
@@ -166,10 +171,32 @@ p {
   margin-bottom: 20px;
 }
 
-.forecasts-container {
+.results-container {
   background-color: #000c;
-  padding: 50px;
-  box-sizing: border-box;
   border-radius: 50px;
   overflow: hidden;
+}
+
+.forecasts-container {
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.additional-container {
+  display: flex;
+  padding: 50px;
+}
+
+.additionalItem {
+  flex: 1;
+  text-align: center;
+}
+
+.additionalItem .celsius-sign {
+  font-size: 13px;
+}
+
+.weekday {
+  font-size: 20px;
+  margin-bottom: 20px;
 }
