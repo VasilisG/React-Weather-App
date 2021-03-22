@@ -3,6 +3,10 @@ body {
   background-image: url('./assets/background.jpg');
 }
 
+p {
+  margin: 0;
+}
+
 ::placeholder {
   font-size: 24px;
 }
@@ -28,12 +32,11 @@ body {
 
 .search-field {
   color: #fff;
-  background-color: #000;
+  background-color: #000c;
   padding: 15px 30px;
   font-size: 24px;
   border-radius: 50px;
   letter-spacing: 1px;
-  opacity: 0.7;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -113,5 +116,60 @@ body {
 }
 
 .weather-icon {
-  width: 150px;
+  width: 180px;
+}
+
+.main-item-container {
+  display: flex;
+}
+
+.icon-container, .info-container {
+  flex: 1;
+}
+
+.icon-container {
+  text-align: center;
+}
+
+.info-container {
+  color: #fff;
+}
+
+.today {
+  font-size: 32px;
+}
+
+.info-container .city {
+  font-size: 52px;
+  font-weight: 900;
+  display:inline-block;
+}
+
+.celsius {
+  font-weight: bold;
+}
+
+.celsius-sign {
+  font-size: 24px;
+}
+
+.comma {
+  font-size: 32px;
+}
+
+.country {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+.city-info {
+  margin-bottom: 20px;
+}
+
+.forecasts-container {
+  background-color: #000c;
+  padding: 50px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  overflow: hidden;
 }

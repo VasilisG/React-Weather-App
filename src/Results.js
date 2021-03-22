@@ -8,7 +8,7 @@ class Results extends React.Component {
             <div>
                 {this.props.forecasts.length ? (
                     <div className="forecasts-container">
-                        <MainWeatherItem  data={this.props.forecasts[0]}/>
+                        <MainWeatherItem  data={this.props.forecasts[0]} city={this.props.city} country={this.props.country}/>
                     </div>
                 ) : (
                     <div className="results-container no-data">

@@ -18,8 +18,8 @@ class App extends React.Component {
   getForecasts(forecasts, country, city){
     this.setState({
       'forecasts' : forecasts,
-      'country' : country,
-      'city' : city
+      'city' : city,
+      'country': country
     });
   }
 
@@ -29,7 +29,7 @@ class App extends React.Component {
         <p className="app-title">React Weather</p>
         <div className="app-content">
           <SearchBar callBack={this.getForecasts}/>
-          <Results forecasts={this.state.forecasts} country={this.state.country}/>
+          <Results forecasts={this.state.forecasts} city={this.state.city} country={this.state.country}/>
         </div>
       </>
     );

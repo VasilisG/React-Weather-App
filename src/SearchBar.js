@@ -33,6 +33,9 @@ class SearchBar extends React.Component {
                         this.props.callBack(newData['consolidated_weather'], newData['parent']['title'], newData['title']);
                     });
                 }
+                else {
+                    this.props.callBack([], '', '');
+                }
             });
         }
         event.preventDefault();
