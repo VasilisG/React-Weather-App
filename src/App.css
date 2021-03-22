@@ -186,12 +186,17 @@ p {
 
 .additional-container {
   display: flex;
-  padding: 50px;
+  border-top: 1px solid #fff2;
 }
 
 .additionalItem {
   flex: 1;
   text-align: center;
+  padding: 30px;
+}
+
+.additionalItem:not(:last-child) {
+  border-right: 1px solid #fff2;
 }
 
 .additionalItem .celsius-sign {
