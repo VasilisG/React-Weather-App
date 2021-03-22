@@ -105,6 +105,7 @@ p {
   height: 200px;
   text-align: center;
   display: table;
+  background-color: #0000;
 }
 
 .no-data-info {
