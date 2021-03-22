@@ -166,6 +166,7 @@ p {
 .country {
   font-size: 26px;
   font-weight: normal;
+  display: block;
 }
 
 .city-info {
