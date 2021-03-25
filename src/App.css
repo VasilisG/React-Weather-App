@@ -96,7 +96,7 @@ p {
   width: 100%;
 }
 
-.results-container, .forecasts-container {
+.results-container, .forecasts-inner-container {
   width: 80%;
   margin: auto;
 }
@@ -174,30 +174,65 @@ p {
 }
 
 .results-container {
-  background-color: #000c;
   border-radius: 50px;
   overflow: hidden;
 }
 
 .forecasts-container {
-  padding: 50px;
+  /* padding: 50px; */
   box-sizing: border-box;
+  background-color: #000c;
+  opacity: 0;
+  position: relative;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.forecasts-inner-container {
+  padding: 50px;
 }
 
 .additional-container {
   display: flex;
-  border-top: 1px solid #fff2;
+  /* border-top: 1px solid #272a2f; */
 }
 
 .additionalItem {
+  background-color: #000c;
   flex: 1;
   text-align: center;
   padding: 30px;
+  opacity: 0;
+  position: relative;
+  animation-name: itemFadeIn;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
-.additionalItem:not(:last-child) {
-  border-right: 1px solid #fff2;
+.additionalItem:nth-child(1){
+  animation-delay: 0s;
 }
+
+.additionalItem:nth-child(2){
+  animation-delay: 0.1s;
+}
+
+.additionalItem:nth-child(3){
+  animation-delay: 0.2s;
+}
+
+.additionalItem:nth-child(4){
+  animation-delay: 0.3s;
+}
+
+.additionalItem:nth-child(5){
+  animation-delay: 0.4s;
+}
+
+/* .additionalItem:not(:last-child) {
+  border-right: 1px solid #272a2f;
+} */
 
 .additionalItem .celsius-sign {
   font-size: 13px;
@@ -206,4 +241,21 @@ p {
 .weekday {
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes itemFadeIn {
+  0% {
+    top: 50px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+
 }

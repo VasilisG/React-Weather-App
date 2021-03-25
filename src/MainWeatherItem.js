@@ -20,7 +20,7 @@ class MainWeatherItem extends React.Component {
                 </div>
                 <div className="info-container">
                     <p className="today">Today</p>
-                    <div class="city-info">
+                    <div className="city-info">
                         <p className="city">{this.props.city}</p>
                         <span className="comma">,</span>
                         <span className="country">{this.props.country}</span>

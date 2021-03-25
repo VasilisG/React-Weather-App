@@ -10,7 +10,9 @@ class Results extends React.Component {
                 {this.props.forecasts.length ? (
                     <div className="results-container">
                         <div className="forecasts-container">
-                            <MainWeatherItem  data={this.props.forecasts[0]} city={this.props.city} country={this.props.country}/>
+                            <div className="forecasts-inner-container">
+                                <MainWeatherItem  data={this.props.forecasts[0]} city={this.props.city} country={this.props.country}/>
+                            </div>
                         </div>
                         <div className="additional-container">
                             {this.props.forecasts.slice(1).map((elem, index) => <AdditionalWeatherItem key={index} data={elem} nextDay={index+1}/>)}
