@@ -7,21 +7,29 @@ class Results extends React.Component {
     render() {
         return (
             <div>
-                {this.props.forecasts.length ? (
-                    <div className="results-container">
-                        <div className="forecasts-container">
-                            <div className="forecasts-inner-container">
-                                <MainWeatherItem  data={this.props.forecasts[0]} city={this.props.city} country={this.props.country}/>
-                            </div>
-                        </div>
-                        <div className="additional-container">
-                            {this.props.forecasts.slice(1).map((elem, index) => <AdditionalWeatherItem key={index} data={elem} nextDay={index+1}/>)}
-                        </div>
+                {this.props.status ? (
+                    <div class="loading-container">
+                        <div class="loading-bar"></div>
+                        <div class="loading-bar"></div>
+                        <div class="loading-bar"></div>
                     </div>
                 ) : (
-                    <div className="results-container no-data">
-                        <p className="no-data-info">No forecast data to display.</p>
-                    </div>
+                    this.props.forecasts.length ? (
+                        <div className="results-container">
+                            <div className="forecasts-container">
+                                <div className="forecasts-inner-container">
+                                    <MainWeatherItem  data={this.props.forecasts[0]} city={this.props.city} country={this.props.country}/>
+                                </div>
+                            </div>
+                            <div className="additional-container">
+                                {this.props.forecasts.slice(1).map((elem, index) => <AdditionalWeatherItem key={index} data={elem} nextDay={index+1}/>)}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="results-container no-data">
+                            <p className="no-data-info">No forecast data to display.</p>
+                        </div>
+                    )
                 )}
             </div>
         )  

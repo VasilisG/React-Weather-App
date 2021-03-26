@@ -23,6 +23,7 @@ class SearchBar extends React.Component {
 
     handleClick(event){
         if(this.state.city.length >= 3){
+            this.props.setLoadingStatus(1);
             fetch(this.META_WEATHER_ENDPOINT + this.state.city)
             .then(response => response.json())
             .then(data => {
@@ -31,10 +32,12 @@ class SearchBar extends React.Component {
                     .then(newResponse => newResponse.json())
                     .then(newData => {
                         this.props.callBack(newData['consolidated_weather'], newData['parent']['title'], newData['title']);
+                        this.props.setLoadingStatus(0);
                     });
                 }
                 else {
                     this.props.callBack([], '', '');
+                    this.props.setLoadingStatus(0);
                 }
             });
         }

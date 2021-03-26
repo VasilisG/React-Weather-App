@@ -10,9 +10,11 @@ class App extends React.Component {
     this.state = {
       'forecasts' : [],
       'country' : '',
-      'city' : ''
+      'city' : '',
+      'loading' : 0
     };
     this.getForecasts = this.getForecasts.bind(this);
+    this.setLoadingStatus = this.setLoadingStatus.bind(this);
   }
 
   getForecasts(forecasts, country, city){
@@ -23,13 +25,19 @@ class App extends React.Component {
     });
   }
 
+  setLoadingStatus(status){
+    this.setState({
+      'loading' : status
+    });
+  }
+
   render(){
     return (
       <>
         <p className="app-title">React Weather</p>
         <div className="app-content">
-          <SearchBar callBack={this.getForecasts}/>
-          <Results forecasts={this.state.forecasts} city={this.state.city} country={this.state.country}/>
+          <SearchBar callBack={this.getForecasts} setLoadingStatus={this.setLoadingStatus}/>
+          <Results forecasts={this.state.forecasts} city={this.state.city} country={this.state.country} status={this.state.loading}/>
         </div>
       </>
     );
