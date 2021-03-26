@@ -8,10 +8,10 @@ class Results extends React.Component {
         return (
             <div>
                 {this.props.status ? (
-                    <div class="loading-container">
-                        <div class="loading-bar"></div>
-                        <div class="loading-bar"></div>
-                        <div class="loading-bar"></div>
+                    <div className="loading-container">
+                        <div className="loading-bar"></div>
+                        <div className="loading-bar"></div>
+                        <div className="loading-bar"></div>
                     </div>
                 ) : (
                     this.props.forecasts.length ? (
