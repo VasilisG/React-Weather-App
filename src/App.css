@@ -301,3 +301,47 @@ p {
   50% {top: 0}
   100%{top: 0}
 }
+
+@media screen and (max-width : 1160px) {
+  .app-content {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .additionalItem {
+    padding: 30px 20px;
+  }
+  .today, .temperature {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .additional-weather-icon {
+    width: 50px;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weather-icon {
+    width: 120px;
+  }
+
+  .results-container, .forecasts-inner-container, .search-container {
+    width: 95%;
+  }
+
+  .info-container .city {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  
+}
