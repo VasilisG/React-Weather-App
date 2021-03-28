@@ -2,7 +2,6 @@ import React from 'react'
 
 class SearchBar extends React.Component {
 
-    // https://github.com/thebuilder/meta-weather-proxy
     META_WEATHER_ENDPOINT = "https://meta-weather.now.sh/api/location/search/?query=";
     META_WEATHER_LOCATION_ENDPOINT = "https://meta-weather.now.sh/api/location/";
 
