@@ -4,10 +4,6 @@ import AdditionalWeatherItem from './AdditionalWeatherItem';
 
 class Results extends React.Component {
 
-    breakPoints = [
-        {width: 767, itemsToShow : 3, itemsToScroll : 1}
-    ];
-
     render() {
         return (
             <div>
