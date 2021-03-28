@@ -1,26 +1,16 @@
 import React from 'react';
+import { DAY_LOOKUP, WEATHER_IMAGE_ENDPOINT } from './Constants';
 
 class AdditionalWeatherItem extends React.Component {
-
-    WEATHER_IMAGE_ENDPOINT = "https://meta-weather.now.sh/static/img/weather/";
-    lookup = {
-        0 : 'Sunday', 
-        1 : 'Monday', 
-        2 : 'Tuesday', 
-        3 : 'Wednesday', 
-        4 : 'Thursday', 
-        5 : 'Friday', 
-        6 : 'Saturday' 
-    };
 
     getDay(){
         var date = new Date();
         date.setDate(date.getDate() + this.props.nextDay);
-        return this.lookup[date.getDay()];
+        return DAY_LOOKUP[date.getDay()];
     }
 
     getWeatherStateIcon(){
-        return this.WEATHER_IMAGE_ENDPOINT + this.props.data.weather_state_abbr + '.svg';
+        return WEATHER_IMAGE_ENDPOINT + this.props.data.weather_state_abbr + '.svg';
     }
 
     render() {

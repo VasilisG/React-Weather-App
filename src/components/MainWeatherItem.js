@@ -1,11 +1,10 @@
 import React from 'react';
+import { WEATHER_IMAGE_ENDPOINT } from './Constants';
 
 class MainWeatherItem extends React.Component {
 
-    WEATHER_IMAGE_ENDPOINT = "https://meta-weather.now.sh//static/img/weather/";
-
     getWeatherStateIcon(){
-        return this.WEATHER_IMAGE_ENDPOINT + this.props.data.weather_state_abbr + '.svg';
+        return WEATHER_IMAGE_ENDPOINT + this.props.data.weather_state_abbr + '.svg';
     }
 
     getAltName(){
@@ -22,7 +21,6 @@ class MainWeatherItem extends React.Component {
                     <p className="today">Today</p>
                     <div className="city-info">
                         <p className="city">{this.props.city}</p>
-                        {/* <span className="comma">,</span> */}
                         <span className="country">{this.props.country}</span>
                     </div>
                     <p className="temperature">Temperature: <span className="celsius">{Math.round(this.props.data.the_temp)}<sup className="celsius-sign">o</sup>C</span></p>

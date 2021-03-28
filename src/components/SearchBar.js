@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { META_WEATHER_ENDPOINT, META_WEATHER_LOCATION_ENDPOINT } from './Constants'; 
 
 class SearchBar extends React.Component {
-
-    META_WEATHER_ENDPOINT = "https://meta-weather.now.sh/api/location/search/?query=";
-    META_WEATHER_LOCATION_ENDPOINT = "https://meta-weather.now.sh/api/location/";
 
     constructor(props){
         super(props);
@@ -23,11 +21,11 @@ class SearchBar extends React.Component {
     handleClick(event){
         if(this.state.city.length >= 3){
             this.props.setLoadingStatus(1);
-            fetch(this.META_WEATHER_ENDPOINT + this.state.city)
+            fetch(META_WEATHER_ENDPOINT + this.state.city)
             .then(response => response.json())
             .then(data => {
                 if(data.length){
-                    fetch(this.META_WEATHER_LOCATION_ENDPOINT + data[0]['woeid'] + '/')
+                    fetch(META_WEATHER_LOCATION_ENDPOINT + data[0]['woeid'] + '/')
                     .then(newResponse => newResponse.json())
                     .then(newData => {
                         this.props.callBack(newData['consolidated_weather'], newData['parent']['title'], newData['title']);
