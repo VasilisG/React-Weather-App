@@ -192,6 +192,7 @@ p {
 
 .forecasts-inner-container {
   padding: 50px;
+  box-sizing: border-box;
 }
 
 .additional-container {
@@ -343,5 +344,43 @@ p {
 }
 
 @media screen and (max-width: 625px) {
-  
+  .additional-container {
+    flex-direction: column;
+  }
+  .weekday, .additionalItem .celsius {
+    font-size: 32px;
+  }
+  .additional-weather-icon {
+    width: 100px;
+  }
+  .additionalItem {
+    border-top: 1px solid #fff3;
+  }
+  .info-container .city {
+    font-size: 32px;
+  }
+  .country {
+    font-weight: lighter;
+  }
+  .temperature {
+    font-size: 24px;
+  }
+  .forecasts-inner-container {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .main-item-container {
+    flex-direction: column;
+  }
+  .icon-container {
+    margin-bottom: 30px;
+  }
+  .info-container {
+    text-align: center;
+  }
+  .info-container .today {
+    margin-bottom: 10px;
+  }
 }
