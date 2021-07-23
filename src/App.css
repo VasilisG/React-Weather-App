@@ -232,10 +232,6 @@ p {
   animation-delay: 0.4s;
 }
 
-/* .additionalItem:not(:last-child) {
-  border-right: 1px solid #272a2f;
-} */
-
 .additionalItem .celsius-sign {
   font-size: 13px;
 }
