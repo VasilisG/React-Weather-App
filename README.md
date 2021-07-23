@@ -1,3 +1,1 @@
-# Weather App
-
-Made in React, using the [Meta Weather API](https://www.metaweather.com/api/) to fetch data.
+A weather app (like there aren't any of them) made in React, using the [Meta Weather API](https://www.metaweather.com/api/) to fetch data.
