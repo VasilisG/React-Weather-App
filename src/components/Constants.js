@@ -1,6 +1,6 @@
-export const META_WEATHER_ENDPOINT = "https://meta-weather.now.sh/api/location/search/?query=";
-export const META_WEATHER_LOCATION_ENDPOINT = "https://meta-weather.now.sh/api/location/";
-export const WEATHER_IMAGE_ENDPOINT = "https://meta-weather.now.sh/static/img/weather/";
+export const META_WEATHER_ENDPOINT = "https://the-ultimate-api-challenge.herokuapp.com/https://www.metaweather.com/api/location/search?query=";
+export const META_WEATHER_LOCATION_ENDPOINT = "https://the-ultimate-api-challenge.herokuapp.com/https://www.metaweather.com/api/location/";
+export const WEATHER_IMAGE_ENDPOINT = "https://www.metaweather.com/static/img/weather/";
 
 export const DAY_LOOKUP = {
     0 : 'Sunday', 
